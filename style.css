@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 18pt;
+}
+
+body{
+    background: linear-gradient(to right, #012030, #13678A);
+}
+
+main{
+    width: 450px;
+    height: 530px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 80px auto 0 auto;
+    border-radius: 20px;
+    background-color: #DAFDBA;
+    box-shadow: 2px 2px 5px #000;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"], .result{
+    width: 270px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #13678A;
+    color: #012030;
+    background-color: #DAFDBA;
+}
+
+input[type="text"], .result p{
+    font-size: 20pt;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.option{
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.option:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    border: solid #000 2px;
+    background-color: #DAFDBA;
+}
+
+input[type="radio"]:checked + .option:before {
+    content: "\2022";
+    color: #13678A;
+    background-color: #13678A;
+    text-align: center;
+    line-height: 16px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    border-radius: 10px;
+    background: #9AEBA3;
+    color: #012030;
+    font-size: 22pt;
+    width: 230px;
+    height: 50px;
+    margin: 10px auto 0;
+}
+
+button:hover{
+    background-color: #45C4B0;
+}
+
+@media screen and (max-width: 760px){
+    main{
+        width: 270px;
+        margin: 30px auto 0 auto;
+    }
+
+    input[type=text]{
+        width: 150px;
+    }
+}
