@@ -19,9 +19,7 @@ function mult(num1, num2){
 }
 
 function div(num1, num2){
-    let divis = (num1 / num2).toFixed(2);
-    divis = divis.replace('.', ',');
-    return divis;
+    return num1 / num2;
 }
 
 function Clear(){    
